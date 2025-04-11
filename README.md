@@ -147,6 +147,18 @@ This project allows you to:
 
 ---
 
+## Keyboard Shortcuts:
+
+  - Switch to Month View: M 
+  - Switch to Day View: D
+  - Previous Month/Day: Left Arrow
+  - Next Month/Day: Right Arrow
+  - Open Filter Popup: F
+  - Open Profile Popup: P
+  - Close Popup: Esc 
+
+---
+
 ## System Requirements
 
 Before setting up the project, ensure you have installed:
