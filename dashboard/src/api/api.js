@@ -1,5 +1,6 @@
 // src/api/api.js
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+console.log("Using backend:", BASE_URL);
 
 // Helper function to perform API requests
 async function apiFetch(endpoint, options = {}) {
