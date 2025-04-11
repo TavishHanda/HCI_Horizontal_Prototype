@@ -1,5 +1,5 @@
 // src/api/api.js
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+const BASE_URL = "https://hci-horizontal-prototype-real.onrender.com";
 console.log("Using backend:", BASE_URL);
 
 // Helper function to perform API requests
