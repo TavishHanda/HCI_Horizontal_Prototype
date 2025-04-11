@@ -1,5 +1,5 @@
 // src/api/api.js
-const BASE_URL = "https://hci-horizontal-prototype.onrender.com";
+const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://127.0.0.1:5000";
 
 // Helper function to perform API requests
 async function apiFetch(endpoint, options = {}) {
