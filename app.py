@@ -5,7 +5,7 @@ import os
 # from flask_migrate import Migrate
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://ammar-y62.github.io"])
 
 # Database Configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///clinic.db'
