@@ -500,12 +500,15 @@ const Profiles = ({ onClose = () => {} }) => {
               onClick={async () => {
                 try {
                   // Call the updatePerson API with the edited patient data
-                  await updatePerson(selectedPatient, transformToBackendFormat, {
+                  await updatePerson(
+                    selectedPatient, 
+                    transformToBackendFormat({
                     name: editedPatientInfo.name,
                     email: editedPatientInfo.email,
                     phone_number: editedPatientInfo.phone,
                     address: editedPatientInfo.address,
-                  });
+                  })
+                );
 
                   // Update the local state with the edited data
                   setPatientDetailsMap({
@@ -894,12 +897,14 @@ const Profiles = ({ onClose = () => {} }) => {
               onClick={async () => {
                 try {
                   // Call the updatePerson API with the edited caretaker data
-                  await updatePerson(selectedCaretaker, transformToBackendFormat, {
+                  await updatePerson(selectedCaretaker,
+                    transformToBackendFormat({
                     name: editedCaretakerInfo.name,
                     email: editedCaretakerInfo.email,
                     phone_number: editedCaretakerInfo.phone,
                     address: editedCaretakerInfo.address,
-                  });
+                  })
+                );
 
                   // Update the local state with the edited data
                   setCaretakerDetailsMap({
