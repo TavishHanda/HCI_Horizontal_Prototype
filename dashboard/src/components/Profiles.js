@@ -500,7 +500,7 @@ const Profiles = ({ onClose = () => {} }) => {
               onClick={async () => {
                 try {
                   // Call the updatePerson API with the edited patient data
-                  await updatePerson(selectedPatient, transformToBackendFormateditedPatientInfo, {
+                  await updatePerson(selectedPatient, transformToBackendFormat, {
                     name: editedPatientInfo.name,
                     email: editedPatientInfo.email,
                     phone_number: editedPatientInfo.phone,
@@ -894,7 +894,7 @@ const Profiles = ({ onClose = () => {} }) => {
               onClick={async () => {
                 try {
                   // Call the updatePerson API with the edited caretaker data
-                  await updatePerson(selectedCaretaker, {
+                  await updatePerson(selectedCaretaker, transformToBackendFormat, {
                     name: editedCaretakerInfo.name,
                     email: editedCaretakerInfo.email,
                     phone_number: editedCaretakerInfo.phone,
