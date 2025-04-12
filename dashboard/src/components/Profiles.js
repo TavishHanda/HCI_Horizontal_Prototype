@@ -95,6 +95,14 @@ const Profiles = ({ onClose = () => {} }) => {
     address: "",
   });
 
+  const transformToBackendFormat = (person) => ({
+    name: person.name,
+    email: person.email,
+    phone_number: person.phone, // backend expects this
+    address: person.address,
+  });
+  
+
   // Filter based on search input
   const filteredPatients = patientList.filter((p) =>
     p.name.toLowerCase().includes(patientSearch.toLowerCase())
@@ -492,7 +500,7 @@ const Profiles = ({ onClose = () => {} }) => {
               onClick={async () => {
                 try {
                   // Call the updatePerson API with the edited patient data
-                  await updatePerson(selectedPatient, {
+                  await updatePerson(selectedPatient, transformToBackendFormateditedPatientInfo, {
                     name: editedPatientInfo.name,
                     email: editedPatientInfo.email,
                     phone_number: editedPatientInfo.phone,
